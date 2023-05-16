@@ -7,7 +7,7 @@ function App() {
     <div>
       <h1 className="heading">My Contacts</h1>
 
-      <Card
+      {/* <Card
         name={contacts[0].name}
         img={contacts[0].imgURL}
         tel={contacts[0].phone}
@@ -26,7 +26,11 @@ function App() {
         img={contacts[2].imgURL}
         tel={contacts[2].phone}
         email={contacts[2].email}
-      />
+      /> */}
+      
+      {contacts.map((entry) =>(
+        <Card key={entry.id} name={entry.name} img={entry.imgURL} tel={entry.phone} email={entry.email} />
+      ))}
     </div>
   );
 }
